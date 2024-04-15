@@ -1,6 +1,6 @@
 # 2d-dev-portfolio-game-hidde-ploysiri
 
-# Ontdek Mij via Mijn 2D Portfolio Game
+# Leer meer over mij via mijn 2D Portfolio Game
 
 Welkom bij mijn interactieve 2D Portfolio Game! Deze unieke game is ontworpen als een virtuele tour door mijn appartement, waarin spelers mij en mijn vaardigheden kunnen leren kennen. De game is gebouwd met KaboomJS, Vite, Vanilla JavaScript, HTML en CSS en dient als een creatieve manier om mijn capaciteiten als ontwikkelaar te tonen en een blik te werpen op mijn persoonlijke leven.
 
