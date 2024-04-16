@@ -17,7 +17,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.TWEED_REPO_TOKEN }} 
+          token: ${{ secrets.GH_ACTIONS_TOKEN }}
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
