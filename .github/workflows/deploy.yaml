@@ -16,24 +16,15 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-
+        with:
+          token: ${{ secrets.TWEED_REPO_TOKEN }} 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' 
+          node-version: '16'
 
       - name: Install Dependencies
         run: npm install
-
-      - name: Build with Vite
-        run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: main  
-          folder: dist  
-          force: true  
 
       - name: Cache Node modules
         uses: actions/cache@v2
@@ -43,3 +34,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Build with Vite
+        run: npm run build
+
+      - name: Setup Git Configuration
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main  
+          folder: dist  
+          force: true  
